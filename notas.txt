@@ -1,7 +1,7 @@
 Comandos:
 
 -ls: Muestra un lista de lo que se encuentra en el directorio en el que se esta (Archivos, carpetas etc.).
-user@bash: ls -a
+user@bash: ls
 
 -echo: Muestra un mensajes
 user@bash: echo Alguien estuvo aqui
