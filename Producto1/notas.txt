@@ -60,9 +60,6 @@ user@bash: nl MAPSFile.txt
 -wc: Muestra el numero de lineas, palabras y caracteres
 user@bash: wc MAPSFile
 
--cut: Corta la informacion en campos y te meustra el campo espesificado
-user@bash: cut MAPSFile.txt
-
 -sed: Busca y remplaza en la informacion
 user@bash:sed 's/Www/wow/g MAPSFile.txt
 
