@@ -1,0 +1,85 @@
+% Ejemplo de documento LaTeX. Tipo de documento y tamaño de letra
+\documentclass[12pt]{article}
+% Preparando para documento en Español.Para documento en Inglés no hay que hacer esto.
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+% EL titulo, autor y fecha del documento
+\title{Tutorial breve de los comandos de Bash}
+\author{Martin Alejandro Paredes Sosa}
+% Aqui comienza el cuerpo del documento
+\usepackage{vmargin}
+%\setpapersize{A4}
+\setmargins{2.5cm}{1.5cm}{16.5cm}{23.42cm}{0pt}{1cm}{0pt}{2cm}
+
+\begin{document}
+% Construye el título
+\maketitle
+
+\section{¿Qué es {\tt bash}?}
+Bash es un interpretador de comandos utilizado sobre el sistema operativo Linux. 
+Su función es de mediar entre el usuario y el sistema.
+
+\section{Navegación}
+Estos comandos permiten la navegación entre los directorios. \\ \\
+\begin{tabular}{|c|l|l|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+pwd & Muestra el directorio en el que se esta trabajando & pwd \\ \hline
+ls & Muestra un lista de contenido del directorio & ls [argumento]\\ \hline
+cd & Nos permite cambiar entre los directorios & cd [destino] \\\hline
+which & Muestra la ruta hacia un programa en particular & which [programa] \\ \hline
+\end{tabular} 
+
+\section{Manipulacion de archivos}
+Estos comando son los que te permiten manipular los archivos o directorios, como copiarlos, crearlos, borralos etre otras.\\ \\
+\begin{tabular}{|c|l|l|}
+\hline Comando & Descripción & Ejemplo \\ \hline
+mkdir & Crea un nuevo directorio & mkdir [directorio] \\ \hline
+rmdir & Remueve un directorio exixtente & rmdir [directorio] \\ \hline
+touch & Crea un nuevo archivo & touch [directorio] \\ \hline
+cp & Copia un archivo & cp [origen][destino] \\ \hline
+mv & Mueve un archivo & mv [origen] [destino] \\ \hline
+rm & Remueve un archivo & rm [directorio] \\ \hline
+\end{tabular} 
+
+
+\section{Trabajar con archivos}
+Estos comandos te permiten realizar visualizar cierta información de los archivos. \\
+\begin{tabular}{|c|l|l|} 
+\hline
+Comando & Descripción & Ejemplo \\ \hline
+cat & Te muestra el contenido de un archivo & cat [archivo] \\ \hline
+vi & Te permite editar un archivo & vi [archivo] \\ \hline
+less & Te permite moverte dentro de un archivo & less [archivo]\\ \hline
+head & Te permite visualizar la parte superior del escrito & head [archivo]  \\ \hline
+tail & Te permite visualizar la parte inferior del escrito & tail [archivo]  \\ \hline
+sort & organiza la información del archivo & sort [archivo] \\ \hline
+nl & Te enumera los reglones del texto & nl [archivo] \\ \hline
+wc & Muestra numero de lineas, palabras y caracteres & wc [archivo] \\ \hline
+sed & Busca y Remplaza en el archivo & sed [arg]/[bsc]/[remp]/[archivo] \\ \hline
+uniq & remueve lineas iguales & uniq [archivo] \\ \hline
+tac & Muestra la información en orden inverso & tac [archivo]\\ \hline
+\end{tabular}
+
+\section{MISC}
+Existen diferentes tipos de comandos, unos te permiten moverte por los directorios, otros manipular tu archivos. Pero tambien existen otra variedad de comandos que nos permiten realizar otras cosas, como el manejo de los procesos y permisos.
+\\ \begin{tabular}{|c|l|l|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+man[comando] & Te muestra el uso del comando & man ls: mustra contenido \\ \hline
+echo & Muestra el mensaje que devuelve la variable & echo [variable] \\ \hline
+chmod & Cambia los permisos de un directorio & chmod [permisos] [archivo] \\ \hline
+egrep & Muestra lineas que coinciden con un patrón & egrep [patrón] [archivo] \\ \hline
+top & Ver los proceso que se estan ejecutando & top \\ \hline
+ps & Muestra los procesos en ejecución & ps [aux] \\ \hline
+kill & Termina un proceso & kill [proceso] \\ \hline
+jobs & Muestra los procesos en segundo plano & jobs \\ \hline
+fg & Mueve procesos a primer plano & fg [num proceso] \\ \hline
+\end{tabular} 
+
+
+% Nunca debe faltar esta última linea.
+\end{document}

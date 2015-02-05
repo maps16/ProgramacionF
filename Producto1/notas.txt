@@ -1,0 +1,95 @@
+Comandos:
+
+-ls: Muestra un lista de lo que se encuentra en el directorio en el que se esta (Archivos, carpetas etc.).
+user@bash: ls
+
+-echo: Muestra un mensajes
+user@bash: echo Alguien estuvo aqui
+
+-pwd: Muestra el directorio en el que te encuentras
+eser@bash: pwd
+
+-cd <Ubicacion>: Cambiar de directorio
+user@bash: cd Martin
+
+-man <comando>: Te muestra la descripcion de un comando ( para que es utilizado y sus posibles extensiones)
+user@bash: man ls
+
+-mkdir: Crear un directorio nuevo
+user@bash: mkdir L1nux
+
+-rmdir: Remueve/borra el directorio
+user@bash: rmdir L1nux
+
+-touch: Crea un documento en blanco
+user@bash: touch Mio2
+
+-cp: copia un documento o directorio
+user@bash: cp Mio2 Mio
+
+-mv: Mueve un documento o directorio
+user@bash: mv Mio Martin/
+
+-rm: Remueve un archivo
+user@bash: rm Mio2
+
+-vi: Edita un archivo
+user@bash: vi MAPSFile
+
+-cat: Lee un archivo
+user@bash: cat MAPSFile
+
+-less: Permite moverte en un archivo
+user@bash: less MAPSFile
+
+-chmod: Camvbiar los permisos de un directorio o archivo
+user@bash: chmod ug+rwx
+
+-head: Ver las primera lineas de informcion
+user@bash: head -5 MAPSFile.txt
+
+-tail: Ver las ultimas lineas de informacion
+user@bash: tail MAPSFile.txt
+
+-sort: Organiza la informacion
+user@bash: sort MAPSFile.txt
+
+-nl: Muestra linea de numero antes de la informacion
+user@bash: nl MAPSFile.txt
+
+-wc: Muestra el numero de lineas, palabras y caracteres
+user@bash: wc MAPSFile
+
+-cut: Corta la informacion en campos y te meustra el campo espesificado
+user@bash: cut MAPSFile.txt
+
+-sed: Busca y remplaza en la informacion
+user@bash:sed 's/Www/wow/g MAPSFile.txt
+
+-uniq: Remueve lineas duplicadas
+user@bash: uniq MAPSFile.txt
+
+-tac: Muestra los datos en orden inverso
+user@bash: tac MAPSFile.txt
+
+-egrep: Se muestran lieneas de datos que coinciden con un patron
+user@bash: egrep 'color'
+
+-top: Ver los proceso que se estan ejecutando en tiempo real
+user@bash: top
+
+-ps: Consige un lista de los procesos que estan en ejecucion
+user@bash: ps aux | grep 'wong'
+
+-kill: Termina un proceso
+user@bash: kill 7689
+
+-jobs: Muestra una lista de t4rabajos que estan corriendo en un segundo plano
+user@bash: jobs 
+
+-fg: Muevo procesos de segundo plano a un primer plano
+fg 4
+
+-which: Te muestra el camino a un programa en particular
+user@bash: which bash
+
