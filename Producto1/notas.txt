@@ -1,4 +1,4 @@
-Comandos:
+Comandos; Descripcion; Ejemplo de uso:
 
 -ls: Muestra un lista de lo que se encuentra en el directorio en el que se esta (Archivos, carpetas etc.).
 user@bash: ls
