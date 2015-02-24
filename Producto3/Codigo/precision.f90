@@ -1,4 +1,4 @@
-!=====================================================
+﻿!=====================================================
 ! Precision.f90 : Determina la precision de la maquina
 !=====================================================
 
@@ -25,4 +25,4 @@ program Limits
 
   end do ! End loop when i > n
 
-end program
+end program Limits

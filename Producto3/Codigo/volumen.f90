@@ -1,8 +1,8 @@
-!=======================================
+﻿!=======================================
 ! Volumen.f90 : Calcula el volumen de una esfera
 !=======================================
 
-program Area_Circulo !Inicio de programa
+program Volumen_Esfera !Inicio de programa
 
   Implicit None
   Real *8 :: radius , altura , vol , P3 !Declaracion de variables
@@ -19,5 +19,5 @@ program Area_Circulo !Inicio de programa
   print *, 'Altura =' , altura
   print *, 'Volumen =', vol
 
-end program Area_Circulo
+end program Volumen_Esfera
   
