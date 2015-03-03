@@ -12,7 +12,6 @@ plot2d ([f(x),t(x),t2(x),t3(x),t4(x)], [x, -%pi, %pi], [y, -2, 2],
 [legend, "(1+x)*Exp(x)","P1(x)","P3(x)","P5(x)","P7(x)"] ,
 [xlabel,"x"], [ylabel,"(1+x)*Exp(x)"] );
 
-
 fortran(f(x));
 fortran(t(x));
 fortran(t2(x));
