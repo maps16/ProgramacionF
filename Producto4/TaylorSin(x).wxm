@@ -8,9 +8,17 @@ t2(x):=taylor(f(x), x, 0, 3);
 t3(x):=taylor(f(x), x, 0, 5);
 t4(x):=taylor(f(x), x, 0, 7);
 
-plot2d ([f(x),t(x),t2(x),t3(x),t4(x)],[x, -%pi, %pi], [y, -2, 2],[style,] ,
-[legend, "Sin(x)","P1(x)","P3(x)","P5(x)","P7(x)"] ,
-[xlabel,"x"], [ylabel,"Sin(x)"],[color, red, green, blue, orange, gray], [axes, solid], [box, false] );
+/*plot2d ([f(x),t(x),t2(x),t3(x),t4(x)],[x, -%pi, %pi], [y, -2, 2],
+[legend, "y=sin(x)","P1(x)","P3(x)","P5(x)","P7(x)"] ,
+[xlabel,"x"], [ylabel,"Sin(x)"],[color, red, green, blue, orange, gray],
+[axes, solid], [style,[lines,3]], [box, false],
+[label,["y=P1(x)",1.4,1.27],["y=P5(x)",2.65,0.7],["y=sin(x)",2.75,0.45],["y=P7(x)",2.65,-0.05],["y=P3(x)",2.35,-1]);*/
+
+plot2d ([f(x),t(x),t2(x),t3(x),t4(x)],[x, -%pi, %pi], [y, -1.55, 1.55],
+[legend,false], [xlabel,"x"], [ylabel,"Sin(x)"],[color, red, green, blue, orange, gray],
+[axes, solid], [style,[lines,3]], [box, false],
+[label,["y=P1(x)",1.4,1.27],["y=P5(x)",2.65,0.7],["y=sin(x)",2.75,0.45],["y=P7(x)",2.65,-0.05],["y=P3(x)",2.35,-1],["y",-0.35,1.5],
+["x", 3.1,-0.1]]);
 
 fortran(f(x));
 fortran(t(x));
@@ -24,7 +32,6 @@ tex(t2(x));
 tex(t3(x));
 tex(t4(x));
 /* [wxMaxima: input   end   ] */
-
 
 /* Maxima can't load/batch files which end with a comment! */
 "Created with wxMaxima"$
