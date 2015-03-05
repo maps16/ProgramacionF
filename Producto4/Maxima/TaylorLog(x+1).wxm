@@ -11,7 +11,7 @@ t4(x):=taylor(f(x), x, 0, 16);
 plot2d ([t(x),t2(x),t3(x),t4(x),f(x)], [x, -1.5, 1.5], [y, -4, 2],
 [legend,"T4(x)","T7(x)","T11(x)","T16(x)","Log(1+x)"] ,
 [xlabel,"x"], [ylabel,"Log(x)"],[color, red, green, blue, cyan, orange], grid2d, [yx_ratio,1.3],[xtics,0.5],[ytics,0.5],
-[gnuplot_preamble,"set key left box"]);
+[gnuplot_preamble,"set key left "]);
 
 
 fortran(f(x));
