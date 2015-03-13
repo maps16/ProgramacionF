@@ -3,25 +3,32 @@
 !                        Calcula "x" y "y" en intervalos de tiempo de 0.01 segundos
 !=======================================================================================
 
-subroutine posicion(v, radian, j, m, n)
+subroutine posicionx(v,radian,j,m,n,vx,vy,ti)
   
   implicit none
-  real, parameter:: g = 9.81
-  real:: m , n
-  real:: v, radian, ti
+  Real, parameter:: g = 9.81
+  Real:: m 
+  Real:: n
+  Real:: vx
+  Real:: vy
+  Real:: v, radian, ti
   integer:: j
 
   ti= (float(j)*0.01)
-  m = v*cos(radian)*ti
-  n = v*sin(radian)*ti-0.5g*ti*ti
+  vx= v*cos(radian)
+  vy= v*sin(radian)
+  m = vx*ti
+  n = vy*ti-0.5*g*ti*ti
 
-end subroutine posicion
+end subroutine posicionx
+
 
 program proyectil
   implicit none
   !Declaración de constantes
   real , parameter :: pi=4.0*atan(1.0)
-  real :: iv , rad , t , a, x, y
+  real :: iv , rad , t , a, x, y, vx, vy, xmax, ymax
+  real , parameter:: g=9.81 !gravedad
   real :: S(300), R(300)
   integer :: i
   !pi es pi y g es la gravedad
@@ -36,6 +43,7 @@ program proyectil
   write(*,*) 'Ingrese la velocidad inicial (Valores Reales)'
   read *, iv
   !transformar angulo a radianes
+
   rad = (a*pi)/180.0
 
   !Abrir archivo de salida de datos
@@ -43,16 +51,33 @@ program proyectil
  
  do i=1,300
   
-     call posicion (iv, rad, i, x, y)
-    S(i)= x
-    R(i)= y
+     call posicionx(iv, rad, i, x, y,vx,vy,t)
+     
+     if (a==90) then
+	S(i)=0
+     else
+	S(i)= x
+     end if
+     R(i)= y
+     
      !escribir en proyectil.dat
      write(1,*) S(i), R(i)
      !Forzar salida para casos especiales cuando y es menor que 0
      if (R(i)<0) exit
 
   end do
-
   close(1)
   !Se cerro el archivo
+
+  ymax= (vy*vy)/(2*g)
+  xmax= S(i)
+    
+  print *, '==========================================='
+  print *, 'Velocidad inicial:', iv, 'm/s'
+  print *, 'Angulo de tiro:', a, 'grados'
+  print *, 'Tiempo total de vuelo', t , 's'
+  print *, 'La altura maxima:', ymax, 'm'
+  print *, 'Alcance del tiro:' , xmax, 'm'
+  print *, '==========================================='
+  print *, rad , vx, vy
 end program proyectil
