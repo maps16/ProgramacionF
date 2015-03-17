@@ -43,6 +43,7 @@ program proyectil
   write(*,*) 'Ingrese la velocidad inicial (Valores Reales)'
   read *, iv
   !transformar angulo a radianes
+
   rad = (a*pi)/180.0
 
   !Abrir archivo de salida de datos
@@ -51,8 +52,17 @@ program proyectil
  do i=1,300
   
      call posicionx(iv, rad, i, x, y,vx,vy,t)
-     S(i)= x
+     
+     if (a==90) then
+	S(i)=0 !Un tiro en 90 grados no posee movimiento en x ya que vx tiene que ser 0 (vx=v*cos(90°)=0)
+     else if(a==0) then
+        S(i)=0 !No existe movimento en este caso titro de 0°
+        t=0
+     else
+	S(i)= x
+     end if
      R(i)= y
+     
      !escribir en proyectil.dat
      write(1,*) S(i), R(i)
      !Forzar salida para casos especiales cuando y es menor que 0
@@ -64,10 +74,7 @@ program proyectil
 
   ymax= (vy*vy)/(2*g)
   xmax= S(i)
-  if (vx<0) then
-     xmax=0
-  end if
-  
+    
   print *, '==========================================='
   print *, 'Velocidad inicial:', iv, 'm/s'
   print *, 'Angulo de tiro:', a, 'grados'
@@ -75,5 +82,5 @@ program proyectil
   print *, 'La altura maxima:', ymax, 'm'
   print *, 'Alcance del tiro:' , xmax, 'm'
   print *, '==========================================='
-  print *, rad
+!  print *, rad , vx, vy ! DEBUG
 end program proyectil
