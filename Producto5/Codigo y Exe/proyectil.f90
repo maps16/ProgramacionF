@@ -27,9 +27,10 @@ program proyectil
   implicit none
   !Declaración de constantes
   real , parameter :: pi=4.0*atan(1.0)
+  integer, parameter :: ntps =300
   real :: iv , rad , t , a, x, y, vx, vy, xmax, ymax
   real , parameter:: g=9.81 !gravedad
-  real :: S(300), R(300)
+  real :: S(ntps), R(ntps)
   integer :: i
   !pi es pi y g es la gravedad
   !iv  Velocidad inicial
@@ -49,7 +50,7 @@ program proyectil
   !Abrir archivo de salida de datos
   open (1,file='proyectil.dat')
  
- do i=1,300
+ do i=1,ntps
   
      call posicionx(iv, rad, i, x, y,vx,vy,t)
      
