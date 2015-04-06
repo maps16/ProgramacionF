@@ -1,5 +1,5 @@
 GFORTRAN module version '10' created from prograg.f03
-MD5:b3d243ab2dcd289fc6276390cb20511a -- If you edit this, you'll get what you deserve.
+MD5:5b3272e38f10e80e9a6780548aa2ba9a -- If you edit this, you'll get what you deserve.
 
 (() () () () () () () () () () () () () () () () () () () () () () () ()
 () () ())
@@ -30,7 +30,7 @@ IMPLICIT-SAVE 0 0) (REAL 4 0 0 0 REAL ()) 0 0 () (CONSTANT (REAL 4 0 0 0
 REAL ()) 0 '0.14a3d70@1') () 0 () () () 0 0)
 7 'g' 'cons' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 IMPLICIT-SAVE 0 0) (REAL 4 0 0 0 REAL ()) 0 0 () (CONSTANT (REAL 4 0 0 0
-REAL ()) 0 '0.9cf5c30@1') () 0 () () () 0 0)
+REAL ()) 0 '0.9ce5600@1') () 0 () () () 0 0)
 8 'ntps' 'cons' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (CONSTANT (
 INTEGER 4 0 0 0 INTEGER ()) 0 '6000') () 0 () () () 0 0)
