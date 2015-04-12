@@ -4,7 +4,7 @@
 !===================================================================
 MODULE cons
 
-  Real , parameter :: rad =(4*atan(1.0))/180
+  Real , parameter :: grad =(4*atan(1.0))/180
   Real , parameter :: pi=4*atan(1.0)
   Integer , parameter :: ntps = 6000
   Real , parameter :: g = 9.806
@@ -19,27 +19,50 @@ subroutine nFric (xi,yi,vi,ang,xnf,ynf,tnf)
   IMPLICIT NONE
   Integer :: i 
   Real, Dimension (1:ntps) :: x,y,t
-  Real :: xi, yi, vi, ang    !Variables externas
+  Real :: xi, yi, vi, ang,rad    !Variables externas
   Real :: xnf, ynf, tnf    !Variables internas
 
-  ang = ang*rad !conversion Grad-Rad
+  rad = ang*grad !conversion Grad-Rad
 
-  tnf = (2*vi*SIN(ang))/(g)
-  xnf = xi+((vi*vi+SIN(2*ang))/(g))
-  ynf = yi+(((vi*vi)*(SIN(ang)*SIN(ang)))/(2*g))
+  tnf = (2*vi*SIN(rad))/(g)
+  xnf = xi+((vi*vi+SIN(2*rad))/(g))
+  ynf = yi+(((vi*vi)*(SIN(rad)*SIN(rad)))/(2*g))
 
   OPEN (1, FILE = "nfric.dat")
 
   DO i=1,ntps,1
-  
-     t(i)= float(i)*0.01
-     x(i)= xi + (vi * cos(ang) *t(i))
-     y(i)= yi + (vi * sin(ang) *t(i)) - (0.5*g*t(i)*t(i))
+
+    IF (ang==0) THEN
+	tnf = 0
+	xnf = 0
+	ynf = 0
+	y(i)= 0
+	t(i)= float(i)*0.01	
+	x(i)= 0
+    ELSE IF (ang==90) THEN
+	tnf = (2*vi*SIN(rad))/(g)
+	xnf = 0
+	ynf = yi+(((vi*vi)*(SIN(rad)*SIN(rad)))/(2*g))		
+	t(i)= float(i)*0.01
+	x(i)=0
+	y(i)= yi + (vi * sin(rad) *t(i)) - (0.5*g*t(i)*t(i))
+    ELSE 
+	tnf = (2*vi*SIN(rad))/(g)
+	xnf = xi+((vi*vi+SIN(2*rad))/(g))
+	ynf = yi+(((vi*vi)*(SIN(rad)*SIN(rad)))/(2*g))	
+	t(i)= float(i)*0.01
+	x(i)= xi + (vi * cos(rad) *t(i))
+	y(i)= yi + (vi * sin(rad) *t(i)) - (0.5*g*t(i)*t(i))
+    END IF     
+     
      write (1,1001) x(i), y(i)
      1001 format (f11.5,f11.5)
-     IF (y(i)<0)  EXIT
+ 
+
+  IF (y(i)<0) EXIT
+     
   END DO
-!     xnf= MAXVAL(x)
+
   CLOSE (1)
   
 end subroutine nFric
@@ -50,7 +73,7 @@ subroutine Fric (xi,yi,vi,ang,xf, yf, tf)
 	IMPLICIT NONE
 	integer :: i
 	REAL, DIMENSION (0:ntps) :: ax, dy, ct, velax, velby, aax, aby
-	Real :: xi, yi , vi, ang !Entrada
+	Real :: xi, yi , vi, ang, rad !Entrada
 	Real :: xf, yf, tf  !Salida
 	Real :: area , radio, masa , ad
 	
@@ -59,15 +82,15 @@ subroutine Fric (xi,yi,vi,ang,xf, yf, tf)
 	Print *, 'Ingrese el radio del proyectil'
 	Read *, radio
 	area= pi*radio*radio
-	
+	rad = ang*grad
 	!do i=0 , ntps ,1
 		!by(i)=0         Debug Problema  con los valores dentro del array
 	!end do			 No hacer caso a esto
 	
 	ax(0) = xi
 	dy(0) = yi
-	velax(0) = vi*cos(ang)
-	velby(0) = vi*sin(ang)
+	velax(0) = vi*cos(rad)
+	velby(0) = vi*sin(rad)
 	ad = (0.5*DAire*Csphere*area)/masa
 	aax(0) = -ad*velax(0)*velax(0)
 	aby(0) = -g-(ad*velby(0)*velby(0))
@@ -78,16 +101,34 @@ subroutine Fric (xi,yi,vi,ang,xf, yf, tf)
 	1001 format (f11.5,f11.5)
 
 	DO i=0, ntps, 1
-		ct(i+1) = ct(i)+0.01
-		velax(i+1) = velax(i)+ aax(i)*ct(i+1)
-		velby(i+1) = velby(i)+ aby(i)*ct(i+1)
-		aax(i+1) = -ad*velax(i)*velax(i)
-		aby(i+1) = -g-(ad*velby(i)*velby(i))
-		ax(i+1) = ax(i)+ velax(i)*ct(i+1)+ (0.5*aax(i)*ct(i+1)*ct(i+1))
-		dy(i+1) = dy(i)+ velby(i)*ct(i+1)+ (0.5*aby(i)*ct(i+1)*ct(i+1))
-		
-		write (2,1001) ax(i+1), dy(i+1)
-		if (dy(i+1)<0) EXIT
+          IF (ang==0) THEN
+	    ct(i+1) = 0 !ct(i)+0.01
+	    !velax(i+1) = velax(i)+ aax(i)*ct(i+1)
+	    !velby(i+1) = velby(i)+ aby(i)*ct(i+1)
+	    !aax(i+1) = -ad*velax(i)*velax(i)
+	    !aby(i+1) = -g-(ad*velby(i)*velby(i))
+	    ax(i+1) = 0 !ax(i)+ velax(i)*ct(i+1)+ (0.5*aax(i)*ct(i+1)*ct(i+1))
+	    dy(i+1) = 0 !dy(i)+ velby(i)*ct(i+1)+ (0.5*aby(i)*ct(i+1)*ct(i+1))
+          ELSE IF (ang==90) THEN
+	    ct(i+1) = ct(i)+0.01
+	    !velax(i+1) = velax(i)+ aax(i)*ct(i+1)
+	    velby(i+1) = velby(i)+ aby(i)*ct(i+1)
+	    !aax(i+1) = -ad*velax(i)*velax(i)
+	    aby(i+1) = -g-(ad*velby(i)*velby(i))
+	    ax(i+1) = 0 !ax(i)+ velax(i)*ct(i+1)+ (0.5*aax(i)*ct(i+1)*ct(i+1))
+	    dy(i+1) = dy(i)+ velby(i)*ct(i+1)+ (0.5*aby(i)*ct(i+1)*ct(i+1))
+          ELSE 
+	    ct(i+1) = ct(i)+0.01
+	    velax(i+1) = velax(i)+ aax(i)*ct(i+1)
+	    velby(i+1) = velby(i)+ aby(i)*ct(i+1)
+	    aax(i+1) = -ad*velax(i)*velax(i)
+	    aby(i+1) = -g-(ad*velby(i)*velby(i))
+	    ax(i+1) = ax(i)+ velax(i)*ct(i+1)+ (0.5*aax(i)*ct(i+1)*ct(i+1))
+	    dy(i+1) = dy(i)+ velby(i)*ct(i+1)+ (0.5*aby(i)*ct(i+1)*ct(i+1))
+          END IF     
+	    	
+	  write (2,1001) ax(i+1), dy(i+1)
+	  IF (dy(i+1)<0) EXIT
 	END DO
 	
 	CLOSE(2)
