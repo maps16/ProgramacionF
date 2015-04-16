@@ -23,33 +23,24 @@ subroutine nFric (xi,yi,vi,ang,xnf,ynf,tnf)
   Real :: xnf, ynf, tnf    !Variables internas
 
   rad = ang*grad !conversion Grad-Rad
-
-  tnf = (2*vi*SIN(rad))/(g)
-  xnf = xi+((vi*vi+SIN(2*rad))/(g))
-  ynf = yi+(((vi*vi)*(SIN(rad)*SIN(rad)))/(2*g))
+  t=0
+  x=0
+  y=0
 
   OPEN (1, FILE = "nfric.dat")
 
   DO i=1,ntps,1
 
     IF (ang==0) THEN
-	tnf = 0
-	xnf = 0
-	ynf = 0
-	y(i)= 0
-	t(i)= float(i)*0.01	
-	x(i)= 0
+	y(i)= yi 
+	t(i)= 0	
+	x(i) =0
+        EXIT
     ELSE IF (ang==90) THEN
-	tnf = (2*vi*SIN(rad))/(g)
-	xnf = 0
-	ynf = yi+(((vi*vi)*(SIN(rad)*SIN(rad)))/(2*g))		
 	t(i)= float(i)*0.01
-	x(i)=0
+	x(i)= 0
 	y(i)= yi + (vi * sin(rad) *t(i)) - (0.5*g*t(i)*t(i))
     ELSE 
-	tnf = (2*vi*SIN(rad))/(g)
-	xnf = xi+((vi*vi+SIN(2*rad))/(g))
-	ynf = yi+(((vi*vi)*(SIN(rad)*SIN(rad)))/(2*g))	
 	t(i)= float(i)*0.01
 	x(i)= xi + (vi * cos(rad) *t(i))
 	y(i)= yi + (vi * sin(rad) *t(i)) - (0.5*g*t(i)*t(i))
@@ -64,7 +55,10 @@ subroutine nFric (xi,yi,vi,ang,xnf,ynf,tnf)
   END DO
 
   CLOSE (1)
-  
+  tnf = MAXVAL(t)
+  xnf = MAXVAL(x)
+  ynf = MAXVAL(y)
+
 end subroutine nFric
 !===================================================================
 subroutine Fric (xi,yi,vi,ang,xf, yf, tf)
@@ -83,9 +77,9 @@ subroutine Fric (xi,yi,vi,ang,xf, yf, tf)
 	Read *, radio
 	area= pi*radio*radio
 	rad = ang*grad
-	!do i=0 , ntps ,1	 Ignorar
-		!by(i)=0         Debug Problema  con los valores dentro del array
-	!end do			 No hacer caso a esto
+	!do i=0 , ntps ,1	! Ignorar
+		!by(i)=0        ! Debug Problema  con los valores dentro del array
+	!end do			! No hacer caso a esto
 	
 	ax(0) = xi
 	dy(0) = yi
@@ -102,9 +96,10 @@ subroutine Fric (xi,yi,vi,ang,xf, yf, tf)
 
 	DO i=0, ntps, 1
           IF (ang==0) THEN
-	    ct(i+1) = 0 
+	    ct(i+1) = 0
 	    ax(i+1) = 0 
-	    dy(i+1) = 0 
+            dy(i+1) = 0
+            EXIT
           ELSE IF (ang==90) THEN
 	    ct(i+1) = ct(i)+0.01
 	    velby(i+1) = velby(i)+ aby(i)*ct(i+1)

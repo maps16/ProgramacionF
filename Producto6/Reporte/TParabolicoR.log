@@ -1,23 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.27)  12 APR 2015 14:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.15)  16 APR 2015 16:06
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **TParabolicoR.tex
-
-(C:\Users\Martin\Desktop\Progfortran\ProgramacionF\Producto6\Reporte\TParabolic
-oR.tex
+(./TParabolicoR.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\base\article.cls"
+Babel <3.9h> and hyphenation patterns for 7 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\base\size12.clo"
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -32,44 +23,41 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\generic\babel\spanish.ldf"
-Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2014/01/29 v5.0m Spanish support from the babel system
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
 \es@datefmt=\count88
 \es@quottoks=\toks14
 \es@quotdepth=\count89
-Package babel Info: Making " an active character on input line 492.
-Package babel Info: Making . an active character on input line 585.
-Package babel Info: Making < an active character on input line 630.
-Package babel Info: Making > an active character on input line 630.
+Package babel Info: Making " an active character on input line 496.
+Package babel Info: Making . an active character on input line 599.
+Package babel Info: Making < an active character on input line 644.
+Package babel Info: Making > an active character on input line 644.
 ))
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\base\inputenc.sty"
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\base\utf8.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\base\t1enc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -219,7 +207,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\base\ot1enc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -250,7 +238,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\base\omsenc.dfu"
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -274,37 +262,37 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\ieeepes\vmargin.sty"
-Package: vmargin 1999/06/01
+(/usr/share/texlive/texmf-dist/tex/latex/vmargin/vmargin.sty
+Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 
-Package `vmargin', V2.2, <1999/06/01>
+Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen104
 \PaperHeight=\dimen105
-) ("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\graphics\graphicx.sty"
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\graphics\keyval.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\graphics\graphics.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\graphics\trig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\latex\pdftex-def\pdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\generic\oberdiek\infwarerr.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Users\Martin\Desktop\Nueva carpeta\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
@@ -312,8 +300,14 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
-(C:\Users\Martin\Desktop\Progfortran\ProgramacionF\Producto6\Reporte\TParabolic
-oR.aux)
+(./TParabolicoR.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+)
+\openout1 = `TParabolicoR.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
@@ -326,7 +320,10 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
- ("C:\Users\Martin\Desktop\Nueva carpeta\tex\context\base\supp-pdf.mkii"
+LaTeX Info: Redefining \. on input line 15.
+LaTeX Info: Redefining \% on input line 15.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count91
 \scratchdimen=\dimen108
@@ -339,7 +336,54 @@ LaTeX Font Info:    ... okay on input line 15.
 \MPnumerator=\count95
 \makeMPintoPDFobject=\count96
 \everyMPtoPDFconversion=\toks19
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -350,73 +394,70 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 26.
- [1
 
-{C:/Users/Martin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2] [3] [4] [5] <IMG/Tiro30g20v.png, id=22, 740.7675pt x 537.00626pt>
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
+<IMG/Tiro30g20v.png, id=23, 740.7675pt x 537.00626pt>
 File: IMG/Tiro30g20v.png Graphic file (type png)
-
-<use IMG/Tiro30g20v.png>
-Package pdftex.def Info: IMG/Tiro30g20v.png used on input line 224.
+ <use IMG/Tiro30g20v.png>
+Package pdftex.def Info: IMG/Tiro30g20v.png used on input line 219.
 (pdftex.def)             Requested size: 426.79134pt x 309.39894pt.
- <IMG/Tiro30g.png, id=23, 1565.85pt x 943.525pt>
+
+<IMG/Tiro30g.png, id=24, 1565.85pt x 943.525pt>
 File: IMG/Tiro30g.png Graphic file (type png)
-
-<use IMG/Tiro30g.png>
-Package pdftex.def Info: IMG/Tiro30g.png used on input line 225.
+ <use IMG/Tiro30g.png>
+Package pdftex.def Info: IMG/Tiro30g.png used on input line 220.
 (pdftex.def)             Requested size: 426.79134pt x 257.15945pt.
- <IMG/Tiro45g20v.png, id=24, 736.7525pt x 533.995pt>
+
+<IMG/Tiro45g20v.png, id=25, 736.7525pt x 533.995pt>
 File: IMG/Tiro45g20v.png Graphic file (type png)
-
-<use IMG/Tiro45g20v.png>
-Package pdftex.def Info: IMG/Tiro45g20v.png used on input line 229.
+ <use IMG/Tiro45g20v.png>
+Package pdftex.def Info: IMG/Tiro45g20v.png used on input line 224.
 (pdftex.def)             Requested size: 426.79134pt x 309.33435pt.
- <IMG/Tiro45g.png, id=25, 1561.835pt x 943.525pt>
-File: IMG/Tiro45g.png Graphic file (type png)
 
-<use IMG/Tiro45g.png>
-Package pdftex.def Info: IMG/Tiro45g.png used on input line 230.
+<IMG/Tiro45g.png, id=26, 1561.835pt x 943.525pt>
+File: IMG/Tiro45g.png Graphic file (type png)
+ <use IMG/Tiro45g.png>
+Package pdftex.def Info: IMG/Tiro45g.png used on input line 225.
 (pdftex.def)             Requested size: 426.79134pt x 257.82172pt.
- [6 <C:/Users/Martin/Desktop/Progfortran/ProgramacionF/Producto6/Reporte/IMG/Ti
-ro30g20v.png (PNG copy)> <C:/Users/Martin/Desktop/Progfortran/ProgramacionF/Pro
-ducto6/Reporte/IMG/Tiro30g.png (PNG copy)>]
-<IMG/Tiro60g20v.png, id=29, 738.76pt x 528.97626pt>
+ [6 <./IMG/Tiro30g20v.png (PNG copy)> <./IMG/Tiro30g.png (PNG copy)>]
+<IMG/Tiro60g20v.png, id=30, 738.76pt x 528.97626pt>
 File: IMG/Tiro60g20v.png Graphic file (type png)
  <use IMG/Tiro60g20v.png>
-Package pdftex.def Info: IMG/Tiro60g20v.png used on input line 234.
+Package pdftex.def Info: IMG/Tiro60g20v.png used on input line 229.
 (pdftex.def)             Requested size: 426.79134pt x 305.5957pt.
 
-<IMG/Tiro60g.png, id=30, 1558.82375pt x 926.46124pt>
+<IMG/Tiro60g.png, id=31, 1558.82375pt x 926.46124pt>
 File: IMG/Tiro60g.png Graphic file (type png)
  <use IMG/Tiro60g.png>
-Package pdftex.def Info: IMG/Tiro60g.png used on input line 235.
+Package pdftex.def Info: IMG/Tiro60g.png used on input line 230.
 (pdftex.def)             Requested size: 426.79134pt x 253.65376pt.
 
-[7 <C:/Users/Martin/Desktop/Progfortran/ProgramacionF/Producto6/Reporte/IMG/Tir
-o45g20v.png (PNG copy)> <C:/Users/Martin/Desktop/Progfortran/ProgramacionF/Prod
-ucto6/Reporte/IMG/Tiro45g.png (PNG copy)>] [8 <C:/Users/Martin/Desktop/Progfort
-ran/ProgramacionF/Producto6/Reporte/IMG/Tiro60g20v.png (PNG copy)> <C:/Users/Ma
-rtin/Desktop/Progfortran/ProgramacionF/Producto6/Reporte/IMG/Tiro60g.png (PNG c
-opy)>]
-(C:\Users\Martin\Desktop\Progfortran\ProgramacionF\Producto6\Reporte\TParabolic
-oR.aux) ) 
+[7 <./IMG/Tiro45g20v.png (PNG copy)> <./IMG/Tiro45g.png (PNG copy)>] [8 <./IMG/
+Tiro60g20v.png (PNG copy)> <./IMG/Tiro60g.png (PNG copy)>] (./TParabolicoR.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+) ) 
 Here is how much of TeX's memory you used:
- 2062 strings out of 493921
- 26449 string characters out of 3143268
- 84641 words of memory out of 3000000
- 5359 multiletter control sequences out of 15000+200000
- 8670 words of font info for 31 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 27i,7n,27p,554b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Martin/Desktop/Nueva carpeta/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb><C:/Users/Martin/Desktop/Nueva carpeta/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb><C:/Users/Martin/Desktop/Nueva carpeta/fonts/type1/public/amsfonts
-/cm/cmr12.pfb><C:/Users/Martin/Desktop/Nueva carpeta/fonts/type1/public/amsfont
-s/cm/cmr17.pfb><C:/Users/Martin/Desktop/Nueva carpeta/fonts/type1/public/amsfon
-ts/cm/cmtt12.pfb>
-Output written on TParabolicoR.pdf (8 pages, 460270 bytes).
+ 2520 strings out of 494925
+ 33509 string characters out of 6178544
+ 97201 words of memory out of 5000000
+ 5717 multiletter control sequences out of 15000+600000
+ 8670 words of font info for 31 fonts, out of 8000000 for 9000
+ 62 hyphenation exceptions out of 8191
+ 37i,7n,26p,554b,248s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on TParabolicoR.pdf (8 pages, 454240 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

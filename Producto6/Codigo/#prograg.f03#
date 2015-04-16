@@ -1,45 +1,3 @@
-\documentclass[12pt]{article}
-
-\usepackage[spanish]{babel}
-\selectlanguage{spanish}
-\usepackage[utf8]{inputenc}
-\usepackage{vmargin}
-\usepackage{graphicx}
-\setmargins{2.5cm}{1.5cm}{16.5cm}{23.42cm}{0pt}{1cm}{0pt}{2cm}
-
-\title{Tiro Parabólico}
-\author{Martín Alejandro Paredes Sosa}
-\date{Abril 2015}
-\graphicspath{{IMG/}}
-
-\begin{document}
-\maketitle
-
-\section{Introducción}
-En la realización de esta práctica, se estudió el tiro parabólico cuando existe una resistencia, la que en este caso es el aire. Utilizando las ecuaciones de movimiento para tiro parabólico con resistencia en el aire, se realizó un programa en FORTRAN, donde el usuario ingresa la posición del proyectil esférico, velocidad inicial y ángulo de tiro, con los cuales nos permite calcular la posición en diferentes tiempos, su alcance, altura máxima y el tiempo total de vuelo en un tiro con y sin resistencia al aire.
-
-\section{Código}
-En este apartado se mostrara el código FORTRAN y la manera en que funciona.
-\subsection{Algoritmo}
-El programa consiste:
-	\begin{enumerate}
-	\item Ingreso de datos por usuario:  Posición $x$ y $y$, Ángulo y velocidad del proyectil
-	\item Se ingresa a la subrutina de nFric
-	\item El ángulo es convertido a radianes, con el cual se descompone la velocidad en $x$ y $y$.
-	\item Se crea un documento $nfric.dat$ donde se escribirá la posición del proyectil.
-	\item Se inicia un ciclo donde se calcula la posición en ambos ejes coordenados
-	\item Cuando la altura llega a 0 se termina el ciclo y se calcula el alcance y altura máxima.
-	\item Se ingresa a la subrutina de Fric
-	\item El ángulo es convertido a radianes
-	\item Se pide la masa del proyectil y el radio
-	\item Se crea el documento $Fric.dat$ donde se escribirá la posición del proyectil.
-	\item Se inicia un ciclo donde se calcula la posición $x$ y $y$.
-	\item Cuando la altura llega a 0 se termina el ciclo y se calcula el alcance y altura máxima.
-	\item Se imprimen resultados en pantalla de alcance, altura máxima y tiempo total de vuelo.
-\end{enumerate}
-
-\subsection{Código FORTRAN}
-\begin{verbatim}
 !===================================================================
 !Este programa calcula el tiro parabolico con resistencia en el aire
 !===================================================================
@@ -209,25 +167,3 @@ program proyectil
   PRINT *, "=========================================================="
   PRINT *, "La diferencia porcentual entre ambos tiros es", error, "%"
 end program proyectil
-
-\end{verbatim}
-\pagebreak
-\section{Resultados}
-En este apartado se mostrara los resultados obtenidos por el .
-\subsection{Tiro 0 Grados}
-\begin{center}
-\includegraphics[width=15cm]{Tiro30g20v.png}
-\includegraphics[width=15cm]{Tiro30g.png}
-\end{center}
-\subsection{Tiro 30 Grados}
-\begin{center}
-\includegraphics[width=15cm]{Tiro45g20v.png}
-\includegraphics[width=15cm]{Tiro45g.png}
-\end{center}
-\subsection{Tiro 60 Grados}
-\begin{center}
-\includegraphics[width=15cm]{Tiro60g20v.png}
-\includegraphics[width=15cm]{Tiro60g.png}
-\end{center}
-
-\end{document}
