@@ -82,7 +82,7 @@ subroutine Fric (xi,yi,vi,ang,xf, yf, tf)
 	!end do			! No hacer caso a esto
 	
 	ax(0) = xi
-	dy(0) = yi
+	dy(0) = 0
 	velax(0) = vi*cos(rad)
 	velby(0) = vi*sin(rad)
 	ad = (0.5*DAire*Csphere*area)/masa
@@ -138,8 +138,11 @@ program proyectil
   Real:: xi, yi, vi, ang !Entrada
   Real:: xnf, ynf, tnf, xf, yf, tf      !Salida
   Real:: error, ag
-  
+  PRINT *, "=========================================================="
   PRINT *, "Este programa calcula el tiro parabolico con resistencia "
+  PRINT *, "Eliminar los Archivos nfric.dat y Fric.dat cada vez que"
+  PRINT *, "que utilice el codigo "
+  PRINT *, "=========================================================="
   PRINT *, "y sin resistencia de un objeto esferico"  
 
   write (*,*) 'Ingrese posicion en "x","y","Vo" y Angulo'
@@ -150,6 +153,9 @@ program proyectil
  
   error= ((xnf-xf)/xnf) * 100.0
 
+  PRINT *, "=========================================================="
+  PRINT *, "Eliminar los Archivos nfric.dat y Fric.dat cada vez que"
+  PRINT *, "que utilice el codigo "
   PRINT *, "=========================================================="
   PRINT *, "Posicion inicial del tiro: x=", xi,", y=",yi
   PRINT *, "Con una velocidad inicial de", vi, "m/s"
