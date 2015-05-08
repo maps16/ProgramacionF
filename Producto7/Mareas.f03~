@@ -1,0 +1,53 @@
+Module Utility
+
+    Implicit None
+    Integer , Parameter :: nDay=159 , Day=48 
+    !Day= Dia 
+    !nDay= Numero de datos por dia
+End Module Utility
+
+
+Program Mareas
+
+    Use Utility
+    Implicit None
+    
+    Real :: XMax
+    Real, Dimension (Day):: Maxlvl
+    Real, Dimension (1:Day,1:nDay):: Time, WaterLVL, DayT, DOY
+    Integer :: i, j
+
+    Open(Unit=11, File="Mareas.csv")
+    Open(Unit=12, File="ReadTest.dat", Status="Replace")
+    Do i=1, Day, 1
+    Do j=1, nDay
+
+    Read(11,*) Time(i,j), WaterLVL(i,j), DOY(i,j), DayT(i,j)
+    Write(12,11)Time(i,j), WaterLVL(i,j), DOY(i,j), DayT(i,j)
+    !Write(*,*) WaterLVL(i,j), "---", DayT(i,j), "---", DOY(i,j) Chequeo de Lectura en pantalla DEBUG
+    
+    End Do
+    End Do
+
+    Close(11)
+    Close(12)
+
+    Open(Unit=13, File="Maximos.dat")
+
+    Do i=1, Day, 1
+        XMax=-1
+        Do j=1, DayT,1
+
+          If(WaterLVL .gt. XMax) Then 
+            XMax=WaterLVL(i,j)
+          End If
+            Maxlvl(i)=XMax
+       End Do
+    End Do
+
+
+    Close(13)
+
+    11 Format (4F10.3)
+
+End Program Mareas
