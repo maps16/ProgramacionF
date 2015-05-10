@@ -14,10 +14,13 @@ Program Periodos
   
   Use Conteo
   Implicit None
-  Real,Dimension(Dat) :: T, Alt, Doy, Dyt, PeM, PeD
-  Real:: Maxm, Tmaxm, Maxd, Tmaxd, Minm, Tminm, Mind, Tmind
+  Real,Dimension(Dat) :: T, Alt, Doy, Dyt, PeM, PeD, PeMD
+  Real:: Maxm, Tmaxm, Minm, Tminm  
+  Real:: Maxd, Tmaxd, Mind, Tmind
+  Real:: Maxmd, Tmaxmd
   Real,Dimension(1:5):: Ti, Al
   Real, Dimension(1:Dias):: Tie, A
+  Real, Dimension(1:2*Dias):: Tim, Hei
   Integer:: i, j
 
 
@@ -87,21 +90,56 @@ Program Periodos
 
   Open(6, File="MaxMes.dat")
   Open(7, File="MaxDias.dat")
-Open(10, File= "Momentario")
+  Open(10, File= "Salida Principal.dat")
+  
+
   Do i=1,5, 1 
      Read(6,*) Ti(i), Al(i)
      If(i>1) Then
-        
+        PeM(i)= Ti(i)-Ti(i-1)	
      End If
   End Do
-    
+  Write(10,*) "Ciclo Lunar:",Sum(PeM)/4 , "Dias"
+
+
   Do i=1 , Dias, 1
-    ! Read(7,*) Tie(i), A(i) 
-    ! Write(8,2) Tie(i), A(i)
+     Read(7,*) Tie(i), A(i)
+     If(i>1) Then
+       PeD(i)=Tie(i)-Tie(i-1)
+     End If
   End Do
-Close (6)
-Close (7)
-Close (10)
+
+  Write(10,*) "Marea Diurna:", (Sum(PeD))/(Dias-1), "Dias"
+
+ Close (6)
+ Close (7)
+
+
+!Calculo para mareas Semidiurna
+ Open(11, File="SDiurna.dat")
   
+ Do j=0, Dat-1, MDia
+  Maxmd=-1
+  Do i=1, Mdia, 1
+    If(Alt(i+j)>Maxmd) Then
+      Maxmd=Alt(i+j)
+      Tmaxmd= Dyt(i+j)
+    End If
+  End Do
+  Write(11,2) Tmaxmd, Maxmd
+ End Do
+
+ Close (11)
+ Open(12, File="SDiurna.dat")
+ !Calculo Periodo SDiurna
+ Do i=1, 2*Dias, 1
+   Read(12,*) Tim(i), Hei(i)
+   If(i>1) Then
+     PeMD(i)=Tim(i)-Tim(i-1)
+   End If
+ End Do
+ Write(10,*) "Marea Semidiurna:", Sum(PeMD)/((2*Dias)-1), "Dias"
+ 
+ Close (10)
   2 Format(2F10.2)
 End Program Periodos
